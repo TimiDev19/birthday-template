@@ -8,6 +8,9 @@
   <title>Happy Birthday!!!</title>
   <meta name="description" content="Happy birthday. Have a blast">
   <link href="https://fonts.googleapis.com/css?family=Work+Sans:300,400" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;600;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style/style.css">
   <!-- <link rel="icon" href="./img/arefin-saim-high-resolution-logo-color-on-transparent-background.png"> -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.3/TweenMax.min.js"></script>
@@ -15,7 +18,11 @@
 </head>
 
 <body>
-  <div class="container">
+  <div id="start-screen">
+    <button id="start-btn">Click to Begin 🎉</button>
+  </div>
+
+  <div class="container hidden">
     <div class="one">
       <h1 class="one">Hey
         <span id="name">my Friend 😁</span>
@@ -42,12 +49,12 @@
       <p class="idea-5">You are a special person. ✨
         <span>:)</span>
       </p>
-      <p class="idea-6">
+      <!-- <p class="idea-6">
         <span>N</span>
         <span>A</span>
         <span>M</span>
         <span>E</span>
-      </p>
+      </p> -->
     </div>
     <div class="six">
       <h3 class="wish-hbd">Happy-Birthday-to-you!</h3>
@@ -130,5 +137,37 @@
     </div>
   </div>
 </body>
+
+<audio id="bg-music" autoplay loop muted>
+  <source src="hbd.mp3" type="audio/mpeg">
+</audio>
+
+<script>
+  // window.addEventListener("click", () => {
+  //     const audio = document.getElementById("bg-music");
+
+  //     audio.muted = false;
+  //     audio.volume = 1;
+  //     audio.play();
+  // });
+  const startBtn = document.getElementById("start-btn");
+  const startScreen = document.getElementById("start-screen");
+  const audio = document.getElementById("bg-music");
+  const mainContent = document.querySelector(".container");
+
+  startBtn.addEventListener("click", () => {
+    // Hide start screen
+    startScreen.style.display = "none";
+
+    // Show actual website
+    mainContent.classList.remove("hidden");
+
+    // Play music
+    audio.muted = false;
+    audio.volume = 1;
+    audio.play();
+  });
+</script>
+
 
 </html>
