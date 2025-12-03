@@ -321,6 +321,10 @@ body {
   justify-content: center;
   align-items: center;
   z-index: 9999;
+  background-image: url('../img/5\'.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 #start-btn {
@@ -381,4 +385,59 @@ body {
   width: 90%;
   margin: auto;
   font-size: 20px;
+}
+
+/* .peecture{
+  height: 200px;
+  width: auto;
+} */
+
+.celebrant-img {
+  position: absolute;
+  bottom: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 150px; /* Base size */
+  max-width: 25vw; /* responsive max width */
+  z-index: 10;
+  transition: transform 0.5s ease;
+}
+
+.celebrant-img img {
+  width: 100%;
+  border-radius: 50%; /* makes it circular */
+  box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+}
+
+/* Floating animation */
+@keyframes float {
+  0%, 100% { transform: translate(-50%, 0); }
+  50% { transform: translate(-50%, -20px); }
+}
+
+.celebrant-img {
+  animation: float 3s ease-in-out infinite;
+}
+
+/* Optional: scale on hover */
+.celebrant-img:hover {
+  transform: translateX(-50%) scale(1.1);
+}
+
+
+.mini-celebrants {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none; /* so it doesn’t block clicks */
+  overflow: hidden;
+}
+
+.mini-celeb {
+  position: absolute;
+  width: 100px; /* small size so it doesn’t block text */
+  border-radius: 10%;
+  opacity: 0.9;
 }
