@@ -343,3 +343,42 @@ body {
 .hidden {
   display: none;
 }
+
+
+.poem-btn {
+  margin-top: 20px;
+  padding: 12px 30px;
+  font-size: 20px;
+  background: #ff7eb3;
+  color: white;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  font-family: 'Fredoka', sans-serif;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.25);
+  transition: 0.25s ease;
+}
+
+.poem-btn:hover {
+  transform: scale(1.1);
+  background: #ff4f91;
+}
+
+.one, .two, .three, .four, .five, .six, .seven, .eight {
+  pointer-events: none !important;
+}
+
+.nine {
+  pointer-events: auto !important;
+}
+
+.poem-container{
+  color: purple;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 90%;
+  margin: auto;
+  font-size: 20px;
+}

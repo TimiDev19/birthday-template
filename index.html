@@ -134,6 +134,7 @@
       <br><br><br>
       <p id="replay">Click here to watch again.</p>
       <p class="last-smile">:)</p>
+      <button id="poem-btn" class="poem-btn">View Some Poems 📜</button>
     </div>
   </div>
 </body>
@@ -167,6 +168,12 @@
     audio.volume = 1;
     audio.play();
   });
+
+
+  const poemBtn = document.getElementById("poem-btn");
+poemBtn.addEventListener("click", () => {
+  window.location.href = "poems.html";
+});
 </script>
 
 
